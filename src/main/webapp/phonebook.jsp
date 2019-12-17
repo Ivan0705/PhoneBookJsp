@@ -25,7 +25,6 @@
         <form action="/phonebook" method="get">
             <label class="filter-label mb-0 mr-2">
                 Введите текст:
-
                 <% String filter = request.getParameter("filter"); %>
                 <input type="text" name="filter"
                        value="<% out.print(filter == null ? "": filter); %>"
@@ -38,7 +37,6 @@
     </div>
 
     <table class="table table-bordered contact-table">
-
         <thead>
         <tr>
             <th>
@@ -59,7 +57,6 @@
                 number++;
         %>
         <tr>
-
             <td>
                 <label class="select-me-label">
                     <input type="checkbox" class="select-me"/>
@@ -83,15 +80,12 @@
                     <button class='btn btn-primary' type='submit'>Удалить</button>
                 </form>
             </td>
-
         </tr>
         <%}%>
         </tbody>
-
     </table>
 
     <button type="button" class="btn btn-primary">Удалить выбранные</button>
-
     <br>
     <label class="server-error-message-container">
         <span class="error-message">
@@ -100,8 +94,8 @@
                  </c:out>
              </c:if>
         </span>
-
     </label>
+
     <form action="add" method="POST">
         <div>
             <label class="form-label">
